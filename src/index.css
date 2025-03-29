@@ -1,1 +1,14 @@
-@import 'tailwindcss'
+@import "tailwindcss";
+
+@theme {
+    --font-JetBrains: "JetBrains Mono", monospace;
+    --color-background: #1C1C22;
+    --color-primary: #00FF9C;
+}
+
+
+@layer base  {
+    body {
+        @apply font-JetBrains bg-background text-white;
+    }
+}
