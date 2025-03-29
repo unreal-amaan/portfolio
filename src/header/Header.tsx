@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 //components
 import Nav from "./Nav";
+import Mobilenav from "./Mobilenav";
 
 const Header = () => {
     return (
@@ -16,6 +17,12 @@ const Header = () => {
                 <div className="hidden md:flex">
                     <Nav />
                 </div>
+
+                {/* small screen nav */}
+                <div className="md:hidden">
+                    <Mobilenav/>
+                </div>
+
             </div>
         </header>
     );
