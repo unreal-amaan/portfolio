@@ -11,4 +11,7 @@
     body {
         @apply font-JetBrains bg-background text-white;
     }
+    .h1 {
+        @apply text-[40px] leading-[1.1] lg:text-[60px] font-semibold;
+    }
 }

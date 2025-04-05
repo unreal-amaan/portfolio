@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 const links = [
     {
         name: "Home",
@@ -19,14 +19,15 @@ const links = [
     },
 ];
 
-const hovereffect =
-    "transition duration-400 ease-in-out hover:text-primary hover:underline hover:underline-offset-6";
+const hovereffect = "text-lg hover:text-primary transition-all"
+
 
 const Nav = () => {
+    const pathname = useLocation().pathname
     return (
         <nav className="flex gap-10">
             {links.map((link) => (
-                <Link to={link.path} className={`${hovereffect}`}>
+                <Link to={link.path} className={`${hovereffect} ${link.path === pathname && "text-primary border-b-2"}`}>
                     {link.name}
                 </Link>
             ))}
