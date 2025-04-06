@@ -12,6 +12,6 @@
         @apply font-JetBrains bg-background text-white;
     }
     .h1 {
-        @apply text-[40px] leading-[1.1] lg:text-[60px] font-semibold;
+        @apply text-[40px] leading-[1.1] md:text-[48px] xl:text-[58px] font-semibold;
     }
 }

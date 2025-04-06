@@ -25,7 +25,7 @@ const links = [
     },
 ];
 
-const hovereffect = "text-xl hover:text-primary transition-all"
+const hovereffect = "text-xl hover:text-primary hover:transition-all duration-500"
 
 
 const Mobilenav = () => {

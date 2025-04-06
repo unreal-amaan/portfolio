@@ -19,7 +19,7 @@ const links = [
     },
 ];
 
-const hovereffect = "text-lg hover:text-primary transition-all"
+const hovereffect = "text-lg hover:text-primary hover:transition-all duration-500"
 
 
 const Nav = () => {
