@@ -1,10 +1,11 @@
 
-import {FaGithub, FaLinkedinIn, FaTwitter} from "react-icons/fa";
+import {FaGithub, FaLinkedinIn} from "react-icons/fa";
+import {FaXTwitter} from "react-icons/fa6";
 
 const socials = [
     {icon: <FaGithub/>, path:"https://github.com/unreal-amaan"},
     {icon: <FaLinkedinIn/>, path:"https://www.linkedin.com/in/syed-amaanuddin-71106b281"},
-    {icon: <FaTwitter/>, path:"https://x.com/Syed_twt"},
+    {icon: <FaXTwitter/>, path:"https://x.com/Syed_twt"},
 ]
 
 interface styles {

@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @theme {
     --font-JetBrains: "JetBrains Mono", monospace;
     --color-background: #1C1C22;
