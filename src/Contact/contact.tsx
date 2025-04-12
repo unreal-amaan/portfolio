@@ -28,7 +28,7 @@ const Contact = () => {
         >
             <div className="container mx-auto h-full w-11/12 lg:w-3/4">
                 <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="lg:w-[54%] order-2 lg:order-none">
+                    <div className="lg:min-w-[54%] order-2 lg:order-none">
                         <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                             <h3 className="lg:text-4xl text-2xl text-primary ">
                                 Let's Work together
@@ -38,10 +38,10 @@ const Contact = () => {
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Input
-                                    type="firstname"
-                                    placeholder="FirstName"
+                                    type="name"
+                                    placeholder="Name"
+                                    className="md:col-span-2 col-span-1"
                                 />
-                                <Input type="lastname" placeholder="LastName" />
                                 <Input type="email" placeholder="Email" />
                                 <Input
                                     type="phone"
