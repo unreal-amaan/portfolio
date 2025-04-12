@@ -8,11 +8,12 @@ const Photo = () => {
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
-                    transition: { delay: 1, duration: 1, ease: "easeInOut" },
+                    transition: { delay: 1.8, duration: 1, ease: "easeInOut" },
                 }}
             >
                 <div className="w-[290px] h-[290px] lg:w-[500px] lg:h-[500px] absolute ml-2">
                     <img
+                        loading="lazy"
                         src={myimage}
                         alt="No image found"
                         className="object-contain rounded-full"

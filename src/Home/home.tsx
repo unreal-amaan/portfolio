@@ -6,6 +6,9 @@ import Socials from "./socials";
 import Photo from "./photo";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 
+//resume pdf
+import resumePdf from "../assets/Amaan Resume.pdf";
+
 const Home = () => {
     return (
         <section className="h-full">
@@ -33,6 +36,7 @@ const Home = () => {
                                 variant={"outline"}
                                 size={"lg"}
                                 className="rounded-full uppercase flex items-center hover:transition-all duration-500"
+                                onClick={() => window.open(resumePdf, "_blank")}
                             >
                                 <span>Download CV</span>
                                 <FiDownload className="text-2xl" />
