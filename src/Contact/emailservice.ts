@@ -1,5 +1,4 @@
 import emailjs from "@emailjs/browser";
-import dotenv from "dotenv";
 interface emailProps {
     name: string;
     email: string;

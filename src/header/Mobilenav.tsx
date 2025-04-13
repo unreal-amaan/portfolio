@@ -31,10 +31,6 @@ const Mobilenav = () => {
   const pathname = useLocation().pathname;
   const [open, setOpen] = useState(false);
 
-  const toggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex justify-center items-center">

@@ -26,7 +26,7 @@ const Contact = () => {
     const phoneRef = useRef<HTMLInputElement>(null);
     const messageRef = useRef<HTMLTextAreaElement>(null);
 
-    async function propCheck(event: React.MouseEvent<HTMLButtonElement>) {
+    async function propCheck() {
         const name = nameRef.current?.value.trim() || "";
         const email = emailRef.current?.value.trim() || "";
         const phone = phoneRef.current?.value.trim() || "";
