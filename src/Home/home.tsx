@@ -7,20 +7,20 @@ import Photo from "./photo";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 //resume pdf
-import resumePdf from "../assets/Amaan Resume.pdf";
+import resumePdf from "../assets/SYED_AMAANUDDIN_RESUME.pdf";
 
 const Home = () => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1, ease: "easeInOut" }}
+            transition={{ delay: 0.5, duration: 0.2, ease: "easeInOut" }}
         >
             <section className="h-full">
                 <div className="container mx-auto h-full w-11/12 lg:w-3/4">
                     <div className="flex flex-col lg:flex-row justify-between items-center lg:pt-16 pt-10">
                         <div className="text-center lg:text-left order-2 lg:order-none mt-10">
-                            <span className="text-xl">Software Developer</span>
+                            <span className="text-xl">Web Developer</span>
                             <h1 className="h1 mb-10">
                                 Hello I'm
                                 <br />
@@ -31,10 +31,13 @@ const Home = () => {
                                 </span>
                             </h1>
                             <p className="max-w-[430px] text-white/80 mb-12">
-                                Focused, precise, and always striving for
-                                perfection—fluent in code, still figuring out
-                                life’s syntax. If there’s a bug, I probably
-                                didn’t write it, but I’ll fix it anyway.
+                                Computer Science undergraduate skilled in
+                                backend and full-stack development with hands-on
+                                experience in building scalable platforms using
+                                Node.js, TypeScript, React, and PostgreSQL.
+                                Skilled in implementing secure authentication
+                                systems, designing RESTful APIs, and creating
+                                responsive user interfaces.
                             </p>
                             <div className="flex flex-col lg:flex-row gap-6 items-center">
                                 <Button

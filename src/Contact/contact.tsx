@@ -33,20 +33,20 @@ const Contact = () => {
         const message = messageRef.current?.value.trim() || "";
 
         if (!name || !email || !phone || !message) {
-            setmailsent(false); // show error toast
+            setmailsent(false); 
             return;
         }
 
         try {
             const res = await sendEmail({ name, email, phone, message });
             if (res === true) {
-                setmailsent(true); // show success toast
+                setmailsent(true); 
             } else {
-                setmailsent(false); // show error toast
+                setmailsent(false); 
             }
         } catch (err) {
             console.log(err);
-            setmailsent(false); // show error toast
+            setmailsent(false); 
         }
     }
 
@@ -54,7 +54,7 @@ const Contact = () => {
         <motion.section
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1, ease: "easeInOut" }}
+            transition={{ delay: 0.5, duration: 0.2, ease: "easeInOut" }}
             className="py-12"
         >
             <div className="container mx-auto h-full w-11/12 lg:w-3/4">

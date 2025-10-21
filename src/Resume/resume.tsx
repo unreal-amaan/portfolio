@@ -1,5 +1,13 @@
 //icons
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import {
+    FaHtml5,
+    FaCss3Alt,
+    FaJs,
+    FaReact,
+    FaNodeJs,
+    FaGitAlt,
+    FaGithub,
+} from "react-icons/fa";
 import {
     SiTailwindcss,
     SiExpress,
@@ -7,6 +15,7 @@ import {
     SiPostgresql,
     SiPostman,
     SiTypescript,
+    SiPrisma,
 } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 
@@ -40,11 +49,11 @@ const about = {
 const education = {
     title: "My Education",
     description:
-        "Currently in 2nd year of B.Tech in Computer Science and Engineering at GRIET Hyderabad.",
+        "Currently in 3rd year of B.Tech in Computer Science and Engineering at GRIET Hyderabad.",
     items: [
         {
             institution: "GRIET Hyderabad",
-            degree: "B.Tech(CSE)",
+            degree: 'B.Tech(CSE)',
             period: "2023 - Present",
         },
         {
@@ -64,26 +73,6 @@ const skills = {
     title: "My Skills",
     description: "I have knowledge of the following technologies",
     items: [
-        {
-            icon: <FaHtml5 />,
-            name: "HTML",
-        },
-        {
-            icon: <FaCss3Alt />,
-            name: "CSS",
-        },
-        {
-            icon: <FaJs />,
-            name: "JavaScript",
-        },
-        {
-            icon: <SiTypescript />,
-            name: "TypeScript",
-        },
-        {
-            icon: <TbBrandCpp />,
-            name: "C++",
-        },
         {
             icon: <FaReact />,
             name: "React.js",
@@ -109,10 +98,43 @@ const skills = {
             name: "PostgreSQL",
         },
         {
+            icon: <FaJs />,
+            name: "JavaScript",
+        },
+        {
+            icon: <SiTypescript />,
+            name: "TypeScript",
+        },
+        {
+            icon: <TbBrandCpp />,
+            name: "C++",
+        },
+        {
+            icon: <FaGitAlt />,
+            name: "Git",
+        },
+        {
+            icon: <FaGithub />,
+            name: "GitHub",
+        },
+        {
             icon: <SiPostman />,
             name: "Postman",
         },
+        {
+            icon: <SiPrisma />,
+            name: "PrismaORM",
+        },
+        {
+            icon: <FaHtml5 />,
+            name: "HTML",
+        },
+        {
+            icon: <FaCss3Alt />,
+            name: "CSS",
+        },
     ],
+
 };
 
 //components
@@ -137,7 +159,7 @@ const Resume = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1, ease: "easeInOut" }}
+            transition={{ delay: 0.5, duration: 0.2, ease: "easeInOut" }}
             className="min-h-[80vh] flex items-center justify-center py-12 lg:py-0"
         >
             <div className="container mx-auto w-11/12 md:w-5/6 lg:w-3/4">

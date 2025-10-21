@@ -8,7 +8,7 @@ const Photo = () => {
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
-                    transition: { delay: 1.5, duration: 1, ease: "easeInOut" },
+                    transition: { delay: 0.5, duration: 0.2, ease: "easeInOut" },
                 }}
             >
                 <div className="w-[290px] h-[290px] lg:w-[500px] lg:h-[500px] absolute ml-2">
