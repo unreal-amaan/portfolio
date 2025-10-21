@@ -137,7 +137,7 @@ const Resume = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.8, duration: 1, ease: "easeInOut" }}
+            transition={{ delay: 1.5, duration: 1, ease: "easeInOut" }}
             className="min-h-[80vh] flex items-center justify-center py-12 lg:py-0"
         >
             <div className="container mx-auto w-11/12 md:w-5/6 lg:w-3/4">

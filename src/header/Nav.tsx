@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 const links = [
     {
         name: "Home",
@@ -19,19 +20,30 @@ const links = [
     },
 ];
 
-const hovereffect = "text-lg hover:text-primary hover:transition-all duration-500"
-
+const hovereffect =
+    "text-lg hover:text-primary hover:transition-all duration-500";
 
 const Nav = () => {
-    const pathname = useLocation().pathname
+    const pathname = useLocation().pathname;
     return (
-        <nav className="flex gap-10">
-            {links.map((link) => (
-                <Link to={link.path} className={`${hovereffect} ${link.path === pathname && "text-primary border-b-2"}`}>
-                    {link.name}
-                </Link>
-            ))}
-        </nav>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1, ease: "easeInOut" }}
+        >
+            <nav className="flex gap-10">
+                {links.map((link) => (
+                    <Link
+                        to={link.path}
+                        className={`${hovereffect} ${
+                            link.path === pathname && "text-primary border-b-2"
+                        }`}
+                    >
+                        {link.name}
+                    </Link>
+                ))}
+            </nav>
+        </motion.div>
     );
 };
 
