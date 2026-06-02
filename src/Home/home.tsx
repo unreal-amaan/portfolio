@@ -7,7 +7,7 @@ import Photo from "./photo";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 //resume pdf
-import resumePdf from "../assets/SYED_AMAANUDDIN_RESUME.pdf";
+import resumePdf from "../assets/SYED_AMAANUDDIN.pdf";
 
 const Home = () => {
     return (
