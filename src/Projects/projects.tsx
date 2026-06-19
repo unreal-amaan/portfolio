@@ -4,6 +4,21 @@ import { LuGithub, LuArrowUpRight } from "react-icons/lu";
 const projects = [
     {
         id: "01",
+        title: "Multithreaded HTTP Server",
+        description:
+            "Developed a multithreaded HTTP server in modern C++ using POSIX sockets. Implemented HTTP request parsing, route handling, static file serving, and persistent connections. Added thread-per-connection concurrency to support multiple simultaneous clients.",
+        techstack: [
+            "C++20",
+            "POSIX Socket API",
+            "CMake",
+            "Linux",
+        ],
+        image: "/cpp-http-server.png",
+        link: "https://github.com/<your-username>/cpp-http-server",
+        github: "https://github.com/<your-username>/cpp-http-server",
+    },
+    {
+        id: "02",
         title: "LaterBox",
         description:
             "Save and organize content from across the web into smart categories for later. Fast, minimal, and synced across devices.",
@@ -21,7 +36,7 @@ const projects = [
         github: "https://github.com/unreal-amaan/LaterBox-FE",
     },
     {
-        id: "02",
+        id: "03",
         title: "OpenSoccer",
         description:
             "Search and discover open-source GitHub projects with filters for language, stars, forks and more — quickly find projects to explore and contribute to.",
@@ -39,7 +54,7 @@ const projects = [
     },
 ];
 
-const Work = () => {
+const Projects = () => {
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -77,7 +92,7 @@ const Work = () => {
                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et."}
                             </p>
 
-                            <div className="flex flex-wrap gap-4 text-primary text-lg">
+                            <div className="flex flex-wrap gap-6 text-primary text-lg">
                                 {project.techstack.map((tech) => (
                                     <span
                                         key={tech}
@@ -124,4 +139,4 @@ const Work = () => {
     );
 };
 
-export default Work;
+export default Projects;

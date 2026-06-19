@@ -6,8 +6,8 @@ import Socials from "./socials";
 import Photo from "./photo";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 
-//resume pdf
-import resumePdf from "../assets/SYED_AMAANUDDIN.pdf";
+const resumeUrl =
+    "https://drive.google.com/file/d/1ijVKl9rtPBwFXChao6h3RXnZaKozoD_-/view";
 
 const Home = () => {
     return (
@@ -45,10 +45,10 @@ const Home = () => {
                                     size={"lg"}
                                     className="rounded-full uppercase flex items-center hover:transition-all duration-500"
                                     onClick={() =>
-                                        window.open(resumePdf, "_blank")
+                                        window.open(resumeUrl, "_blank", "noopener,noreferrer")
                                     }
                                 >
-                                    <span>Download CV</span>
+                                    <span>Resume</span>
                                     <FiDownload className="text-2xl" />
                                 </Button>
                                 <div className="mb-8 lg:mb-0">

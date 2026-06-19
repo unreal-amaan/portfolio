@@ -16,6 +16,7 @@ import {
     SiPostman,
     SiTypescript,
     SiPrisma,
+    SiCmake,
 } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 
@@ -74,6 +75,18 @@ const skills = {
     description: "I have knowledge of the following technologies",
     items: [
         {
+            icon: <TbBrandCpp />,
+            name: "C++",
+        },
+        {
+            icon: <FaJs />,
+            name: "JavaScript",
+        },
+        {
+            icon: <SiTypescript />,
+            name: "TypeScript",
+        },
+        {
             icon: <FaReact />,
             name: "React.js",
         },
@@ -86,6 +99,10 @@ const skills = {
             name: "express.js",
         },
         {
+            icon: <SiCmake />,
+            name: "CMake",
+        },
+        {
             icon: <SiTailwindcss />,
             name: "tailwindcss",
         },
@@ -96,18 +113,6 @@ const skills = {
         {
             icon: <SiPostgresql />,
             name: "PostgreSQL",
-        },
-        {
-            icon: <FaJs />,
-            name: "JavaScript",
-        },
-        {
-            icon: <SiTypescript />,
-            name: "TypeScript",
-        },
-        {
-            icon: <TbBrandCpp />,
-            name: "C++",
         },
         {
             icon: <FaGitAlt />,
@@ -134,7 +139,6 @@ const skills = {
             name: "CSS",
         },
     ],
-
 };
 
 //components
