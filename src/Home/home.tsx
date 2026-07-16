@@ -7,7 +7,7 @@ import Photo from "./photo";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 const resumeUrl =
-    "https://drive.google.com/file/d/1ijVKl9rtPBwFXChao6h3RXnZaKozoD_-/view";
+    "https://drive.google.com/file/d/1OaTjagHkXupvWTUw2cnD_Q5WnlJsQ4Jm/view?usp=drive_link";
 
 const Home = () => {
     return (
