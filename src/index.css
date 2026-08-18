@@ -1,16 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @theme {
-    --font-JetBrains: "JetBrains Mono", monospace;
-    --color-background: #1C1C22;
-    --color-primary: #00FF9C;
+    /* Fonts */
+    --font-sans: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    /* Catppuccin Mocha */
+
+    /* Base */
+    --color-background: #1e1e2e;
+
+    /* Text */
+    --color-foreground: #cdd6f4;
+
+    /* Surfaces */
+    --color-surface: #181825;
+    --color-surface-alt: #313244;
+
+    /* Overlay / Border */
+    --color-border: #45475a;
+
+    /* Subtext 0 */
+    --color-muted: #a6adc8;
+
+    /* Overlay 1 */
+    --color-subtle: #7f849c;
+
+    /* Mauve */
+    --color-primary: #cba6f7;
+
+    /* Blue */
+    --color-secondary: #89b4fa;
+
+    /* Green */
+    --color-success: #a6e3a1;
+
+    /* Peach */
+    --color-warning: #fab387;
+
+    /* Red */
+    --color-danger: #f38ba8;
+
+    /* Pink */
+    --color-pink: #f5c2e7;
+
+    /* Crust */
+    --color-crust: #11111b;
 }
 
-
-@layer base  {
-    body {
-        @apply font-JetBrains bg-background text-white ;
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
     }
-    .h1 {
-        @apply text-[40px] leading-[1.1] md:text-[48px] xl:text-[58px] font-semibold;
+
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+    }
+
+    ::selection {
+        background: #cba6f7;
+        color: #1e1e2e;
     }
 }

@@ -1,56 +1,31 @@
 import { motion } from "framer-motion";
-import { LuGithub, LuArrowUpRight } from "react-icons/lu";
+import { LuArrowUpRight, LuGithub } from "react-icons/lu";
 
 const projects = [
     {
         id: "01",
-        title: "Multithreaded HTTP Server",
+        title: "Lox Interpreter",
         description:
-            "Developed a multithreaded HTTP server in modern C++ using POSIX sockets. Implemented HTTP request parsing, route handling, static file serving, and persistent connections. Added thread-per-connection concurrency to support multiple simultaneous clients.",
-        techstack: [
-            "C++20",
-            "POSIX Socket API",
-            "CMake",
-            "Linux",
-        ],
-        image: "/cpp-http-server.png",
-        link: "https://github.com/<your-username>/cpp-http-server",
-        github: "https://github.com/<your-username>/cpp-http-server",
+            "A tree-walk interpreter for the Lox programming language, implemented in modern C++ based on Crafting Interpreters. Includes lexical analysis, recursive descent parsing, AST generation, static scope resolution, and object-oriented language features.",
+        techstack: ["C++20", "CMake"],
+        github: "https://github.com/unreal-amaan/lox",
     },
     {
         id: "02",
-        title: "LaterBox",
+        title: "Multi-Threaded HTTP Server",
         description:
-            "Save and organize content from across the web into smart categories for later. Fast, minimal, and synced across devices.",
-        techstack: [
-            "React.js",
-            "Tanstack Query",
-            "TailwindCSS",
-            "Node.js",
-            "Express.js",
-            "PostgreSQL",
-            "PrismaORM",
-        ],
-        image: "/LaterBox.png",
-        link: "https://laterbox-fe.netlify.app/",
-        github: "https://github.com/unreal-amaan/LaterBox-FE",
+            "A multithreaded HTTP server built in modern C++ using low-level BSD socket APIs. Implements connection management, HTTP request parsing, response generation, and concurrent client handling through a modular networking architecture.",
+        techstack: ["C++20", "TCP/IP", "BSD Sockets", "CMake"],
+        github: "https://github.com/unreal-amaan/cpp-http-server",
     },
     {
         id: "03",
-        title: "OpenSoccer",
+        title: "LaterBox",
         description:
-            "Search and discover open-source GitHub projects with filters for language, stars, forks and more — quickly find projects to explore and contribute to.",
-        techstack: [
-            "React.js",
-            "TailwindCSS",
-            "Node.js",
-            "Express.js",
-            "PostgreSQL",
-            "PrismaORM",
-        ],
-        image: "/opensoccer.png",
-        link: "https://opensoccer.vercel.app/",
-        github: "https://github.com/unreal-amaan/opensoccer_fe",
+            "A full-stack platform for organizing, searching, and sharing categorized links. Built with React, TypeScript, Node.js, PostgreSQL, and Prisma, with authentication and React Query for efficient client-server synchronization.",
+        techstack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Prisma"],
+        link: "https://laterbox-fe.netlify.app/",
+        github: "https://github.com/unreal-amaan/LaterBox-FE",
     },
 ];
 
@@ -58,82 +33,85 @@ const Projects = () => {
     return (
         <motion.section
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.3, ease: "easeInOut" }}
-            className="py-20"
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="py-32"
         >
-            <div className="mx-auto w-11/12 md:w-5/6 lg:w-3/4 space-y-32">
-                {projects.map((project) => (
-                    <motion.div
-                        key={project.id}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        className={`flex flex-col-reverse lg:flex-row justify-between items-center gap-12`}
-                    >
-                        <div className="flex-1 space-y-6 group">
-                            <h2
-                                className="text-7xl md:text-9xl font-semibold text-transparent stroke-2 stroke-white transition-all duration-300"
-                                style={{
-                                    WebkitTextStroke: "2px white",
-                                    color: "transparent",
-                                }}
-                            >
+            <div className="mx-auto w-11/12 md:w-5/6 lg:w-3/4">
+                <div className="mb-20">
+                    <p className="mb-4 font-mono text-sm uppercase tracking-[0.2em] text-primary">
+                        Selected work
+                    </p>
+
+                    <h2 className="font-sans text-4xl font-bold tracking-tight md:text-6xl">
+                        Projects
+                    </h2>
+                </div>
+
+                <div className="divide-y divide-border">
+                    {projects.map((project) => (
+                        <motion.article
+                            key={project.id}
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className="grid gap-5 py-10 sm:gap-8 sm:py-12 md:grid-cols-[100px_1fr] md:py-16"
+                        >
+                            <span className="font-mono text-sm text-subtle">
                                 {project.id}
-                            </h2>
+                            </span>
 
-                            <h3 className="text-2xl md:text-4xl font-semibold text-white">
-                                {project.title}
-                            </h3>
+                            <div className="max-w-4xl">
+                                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                                    {" "}
+                                    <h3 className="font-sans text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+                                        {project.title}
+                                    </h3>
+                                    <div className="flex shrink-0 items-center gap-3">
+                                        {project.link && (
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={`${project.title} live project`}
+                                                className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition-all duration-300 hover:border-primary hover:bg-primary hover:text-background"
+                                            >
+                                                <LuArrowUpRight size={20} />
+                                            </a>
+                                        )}
 
-                            <p className="text-gray-400 max-w-md">
-                                {project.description ||
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque consequat, faucibus et, et."}
-                            </p>
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`${project.title} GitHub repository`}
+                                            className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition-all duration-300 hover:border-primary hover:bg-primary hover:text-background"
+                                        >
+                                            <LuGithub size={19} />
+                                        </a>
+                                    </div>
+                                </div>
 
-                            <div className="flex flex-wrap gap-6 text-primary text-lg">
-                                {project.techstack.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="hover:text-white transition"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
+                                <p className="mt-5 max-w-2xl font-sans text-sm leading-7 text-muted sm:mt-6 sm:text-base sm:leading-8 md:text-lg">
+                                    {project.description}
+                                </p>
+
+                                <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2">
+                                    {project.techstack.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="font-mono text-sm text-primary"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-
-                            <div className="flex items-center gap-6 text-2xl">
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-gray-600 hover:border-primary hover:text-primary transition"
-                                >
-                                    <LuArrowUpRight size={27} />
-                                </a>
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-full border border-gray-600 hover:border-primary hover:text-primary transition"
-                                >
-                                    <LuGithub size={27} />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="flex-1 w-full">
-                            <motion.img
-                                src={project.image}
-                                alt={project.title}
-                                className="rounded-2xl w-full border border-gray-700 shadow-lg"
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ type: "spring", stiffness: 120 }}
-                            />
-                        </div>
-                    </motion.div>
-                ))}
+                        </motion.article>
+                    ))}
+                </div>
             </div>
         </motion.section>
     );

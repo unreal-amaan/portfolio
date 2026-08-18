@@ -1,35 +1,35 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-//components
+
 import Nav from "./Nav";
 import Mobilenav from "./Mobilenav";
 
 const Header = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.2, ease: "easeInOut" }}
+        <motion.header
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="sticky top-0 z-40 border-b border-border/50 bg-background/90 backdrop-blur-md"
         >
-            <header className="py-8">
-                <div className="flex justify-between items-center mx-auto w-11/12 md:w-5/6 lg:w-3/4">
-                    <Link to="/">
-                        <h1 className="text-4xl font-semibold">
-                            Syed<span className="text-primary">.</span>
-                        </h1>
-                    </Link>
-                    {/* large screen nav */}
-                    <div className="hidden lg:flex">
-                        <Nav />
-                    </div>
+            <div className="mx-auto flex h-20 w-11/12 items-center justify-between md:w-5/6 lg:w-3/4">
+                <a
+                    href="#home"
+                    className="font-sans text-2xl font-bold tracking-tight"
+                >
+                    Syed<span className="text-primary">.</span>
+                </a>
 
-                    {/* small screen nav */}
-                    <div className="lg:hidden">
-                        <Mobilenav />
-                    </div>
+                {/* Desktop navigation */}
+                <div className="hidden lg:flex">
+                    <Nav />
                 </div>
-            </header>
-        </motion.div>
+
+                {/* Mobile navigation */}
+                <div className="lg:hidden">
+                    <Mobilenav />
+                </div>
+            </div>
+        </motion.header>
     );
 };
 
