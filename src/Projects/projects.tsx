@@ -4,6 +4,14 @@ import { LuArrowUpRight, LuGithub } from "react-icons/lu";
 const projects = [
     {
         id: "01",
+        title: "Compiler Cost Model",
+        description:
+            "An LLVM-based compiler cost model for predicting the profitability of loop optimizations. Extracts compiler-native features from candidate loops and uses heuristic and machine learning models to estimate whether transformations such as unrolling, vectorization, fusion, and tiling are likely to improve performance.",
+        techstack: ["C++", "LLVM", "Python", "Machine Learning", "CMake"],
+        github: "https://github.com/unreal-amaan/compiler-cost-model",
+    },
+    {
+        id: "02",
         title: "Lox Interpreter",
         description:
             "A tree-walk interpreter for the Lox programming language, implemented in modern C++ based on Crafting Interpreters. Includes lexical analysis, recursive descent parsing, AST generation, static scope resolution, and object-oriented language features.",
@@ -11,7 +19,7 @@ const projects = [
         github: "https://github.com/unreal-amaan/lox",
     },
     {
-        id: "02",
+        id: "03",
         title: "Multi-Threaded HTTP Server",
         description:
             "A multithreaded HTTP server built in modern C++ using low-level BSD socket APIs. Implements connection management, HTTP request parsing, response generation, and concurrent client handling through a modular networking architecture.",
@@ -19,7 +27,7 @@ const projects = [
         github: "https://github.com/unreal-amaan/cpp-http-server",
     },
     {
-        id: "03",
+        id: "04",
         title: "LaterBox",
         description:
             "A full-stack platform for organizing, searching, and sharing categorized links. Built with React, TypeScript, Node.js, PostgreSQL, and Prisma, with authentication and React Query for efficient client-server synchronization.",
